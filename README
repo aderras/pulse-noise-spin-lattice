@@ -1,0 +1,49 @@
+Uptdated March 5, 2020
+
+This is a README file for the pulse-noise-thermal-collapse program.
+
+--------------------------------
+
+FOLDERS
+
+data/
+The data folder in the main directory stores all processed data and the raw data that was downloaded from the cluster. 
+*Note that wihin julia-files there is a folder called data. When running the code on your system results of computation will save there. 
+
+img/
+Stores figures from post-processing
+
+julia-files/
+Contains all the pulse-noise script files
+
+mm-files/
+Contains all Wolfram Mathematica files which process thermal collapse data. 
+
+--------------------------------
+
+EVALUATING THERMAL COLLAPSE SCRIPT
+
+To run the script, navigate to the julia-files directory and run the script with ./main_run.jl
+
+To change evaluation parameters, open main_run.jl and follow instructions there. It is also shown there how to input arguments from command line. 
+
+NOTE ON DIPOLE-DIPOLE
+There is no periodic boundary condition on DDI at the moment, so computations using dipole-dipole interaction should set this parameter to false.
+
+----------------------------------
+
+RESULTS AND POST-PROCESSING
+
+The results of thermal collapse computation are saved in the folder julia-files/data.
+
+Sample results of computations done on the cluster are found in data/raw-collapse-data.
+
+*NOTE: Results files at the moment do not distinguish between different initial conditions. It is suggested that one organizes folders according to
+
+-----------------------------------
+
+SAMPLE DATA
+
+Some examples for a skyrmion initial condition are provided. We provide both raw collapse data and processed collapse times.  
+
+
