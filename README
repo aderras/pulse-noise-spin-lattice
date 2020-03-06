@@ -2,6 +2,22 @@ Uptdated March 5, 2020
 
 This is a README file for the pulse-noise-thermal-collapse program.
 
+---------------------------------
+
+REFERENCES
+
+Pulse noise method for spin systems was proposed in:
+
+D. A. Garanin
+Pulse-noise approach for classical spin systems
+Phys. Rev. E 95, 013306-(8) (2017)  
+
+Extraction of the escape rate from the collapse/transition times is described in the Appendix to:
+
+D. A. Garanin
+Uniform and nonuniform thermal switching of magnetic particles
+Phys. Rev. B 98, 144425-(12) (2018)  
+
 --------------------------------
 
 FOLDERS
@@ -45,5 +61,4 @@ Sample results of computations done on the cluster are found in data/raw-collaps
 SAMPLE DATA
 
 Some examples for a skyrmion initial condition are provided. We provide both raw collapse data and processed collapse times.  
-
 
