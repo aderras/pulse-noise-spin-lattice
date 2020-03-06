@@ -1,4 +1,4 @@
-Uptdated March 5, 2020
+Uptdated March 6, 2020
 
 This is a README file for the pulse-noise-thermal-collapse program.
 
@@ -17,6 +17,12 @@ Extraction of the escape rate from the collapse/transition times is described in
 D. A. Garanin
 Uniform and nonuniform thermal switching of magnetic particles
 Phys. Rev. B 98, 144425-(12) (2018)  
+
+Method was implemented on isolated 2D magnetic skyrmion in:
+
+A. Derras-Chouk, E. M. Chudnovsky, D. A. Garanin
+Thermal Collapse of a Skyrmion
+Journal of Applied Physics 126, 083901 (2019)
 
 --------------------------------
 
