@@ -1,6 +1,5 @@
 module initialCondition
 
-    using main
     export buildInitial
 
     @inline xcomp(z::Complex) = if isnan(real(z)/(1+(abs(z)^2)/4)) 0. else real(z)/(1+(abs(z)^2)/4) end

@@ -3,7 +3,7 @@
 # saves the resulting data. 
 module computeSolution
 
-    using main,modifyFiles,calculateEnergy,calculateTopologicalCharge,LLequation,
+    using modifyFiles,calculateEnergy,calculateTopologicalCharge,LLequation,
     calculateMagnetization,rungeKutta,LLequation,normalize,noiseRotation,Dates
     export evaluateLL!,runRelaxation!,pulseNoiseStep!
 
@@ -30,14 +30,14 @@ module computeSolution
         
         enArray = zeros(maxLoop)
         topChargeArray = zeros(maxLoop)
-        magnArray = zeros(maxLoop)
+        reffArray = zeros(maxLoop)
 
 
-        for i in 1:20#maxLoop
+        for i in 1:maxLoop
         
             enArray[i]          = calcEnergy(mat, matParams)
 	        topChargeArray[i]	= calcQ(mat)
-	        magnArray[i]	    = calcM(mat)
+	        reffArray[i]	    = sqrt(calcM2(mat)*m*n/(4*pi))
 
             pulseNoiseStep!(mat, matParams, evalParams)
 
@@ -56,8 +56,8 @@ module computeSolution
         "H=",h,"_DMI=",dmi,"_DDI=",ed,"_PMA=",pma,"_",timestampString,".h5"),filter(x->x!=0.,topChargeArray))
         writeDataH5(string(reldir,"/energy_during_dynamics_T=",t,"_","H=",h,"_DDI=",
         ed,"_DMI=",dmi,"_PMA=",pma,"_",timestampString,".h5"),filter(x->x!=0.,enArray))
-	    writeDataH5(string(reldir,"/magnetization_during_dynamics_T=",t,"_","H=",h,"_DDI=",
-        ed,"_DMI=",dmi,"_PMA=",pma,"_",timestampString,".h5"),filter(x->x!=0.,magnArray))
+	    writeDataH5(string(reldir,"/effective_size_during_dynamics_T=",t,"_","H=",h,"_DDI=",
+        ed,"_DMI=",dmi,"_PMA=",pma,"_",timestampString,".h5"),filter(x->x!=0.,reffArray))
 
     end
 
@@ -121,8 +121,6 @@ module computeSolution
         "_DMI=",dmi,"_DDI=",ed,"_PMA=",pma,"_.h5"),filter(x->x!=0.,enArray))
         writeDataH5(string(reldir,"/effective_size_during_relaxation_T=",t,"_","H=",h,
         "_DMI=",dmi,"_DDI=",ed,"_PMA=",pma,"_.h5"),filter(x->x!=0.,reffArray))
-
-        end
 
     end
 

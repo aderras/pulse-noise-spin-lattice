@@ -1,6 +1,6 @@
 module LLequation
 
-    using main,calculateEffectiveField,modifyFiles
+    using calculateEffectiveField,modifyFiles
     export RHS!,saveRHS
 
     # inputs: t = time of current step, mat = spin array, matRHS = right hand

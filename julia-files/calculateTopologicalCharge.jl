@@ -4,7 +4,6 @@
 #
 module calculateTopologicalCharge
 
-    using main
     export calcQ
 
     # The following function calculates the topological charge of

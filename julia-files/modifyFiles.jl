@@ -1,7 +1,7 @@
 # The following module contains functions related to file saving and reading.
 
 module modifyFiles
-    using main,HDF5
+    using HDF5
     export getH5data,writeDataH5,saveInitCondition,makeDirectory,saveAllData
 
     # Imports spin data

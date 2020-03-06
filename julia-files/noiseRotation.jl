@@ -2,7 +2,7 @@
 
 module noiseRotation
 
-    using main,Distributions,normalize,LinearAlgebra
+    using Distributions,normalize,LinearAlgebra
     export rotateSpins!
 
     function rotateSpins!(mat::Array{Float64,3}, evalParams::Array{Float64,1})

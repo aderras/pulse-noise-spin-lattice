@@ -3,7 +3,7 @@
 # dipole field in a spin lattice.
 module ddiFunctions
 
-    using main,FFTW,PaddedViews
+    using FFTW,PaddedViews
     export FHD,convfft,buildVD,convolve_explicit,convolve_transpose,
     vddMatrices
 

@@ -1,6 +1,6 @@
 module calculateMagnetization
 
-export calcM
+export calcM, calcM2
 
 	function calcM(mat)
 

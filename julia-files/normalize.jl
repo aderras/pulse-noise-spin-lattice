@@ -2,7 +2,7 @@
 #
 #
 module normalize
-    using main
+
     export normalizeSpins!
     
     function normalizeSpins!(mat::Array{Float64,3})

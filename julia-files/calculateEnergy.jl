@@ -3,7 +3,7 @@ push!(LOAD_PATH, pwd())
 # This module contains functions that calculate the energy of a 
 # spin lattice. 
 module calculateEnergy
-    using main,ddiFunctions
+    using ddiFunctions
     export calcEnergy
 
     # inputs: spin array (N,N,3), matParams = [H, DMI, PMA, ED, PBC]

@@ -6,7 +6,7 @@
 # Note: effectivefield!() does not compute ddi, since we need to compute the
 # field in the whole lattice to calculate DDI
 module calculateEffectiveField
-    using main,ddiFunctions,FFTW
+    using ddiFunctions,FFTW
     export effectivefield!,getFullEffField!,ddifield
 
     # inputs: mat = spin matrix, effField = (3,1) output float array, nx,ny = 

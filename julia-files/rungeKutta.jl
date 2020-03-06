@@ -1,6 +1,7 @@
 # This module contains the Runge-Kutta stepping function.
 module rungeKutta
-    using main,calculateEffectiveField,LLequation
+
+    using calculateEffectiveField,LLequation
     export rk4!
 
     # Calling this function once leads to 'n' iterations of the 
