@@ -50,8 +50,8 @@ module main_run
   # comment out the previous runRelaxation!() and use the getDataH5()
   # command below
   # s0 = getDataH5(string("/data/spin_field_after_relaxation_T=0.0_H=",h,
-  #    "_DMI=",dmi,"_DDI=",ed,"_PMA=",pma,"_.h5"))
-  # @time evaluateLL!(s0, params, evalParams)
+  #   "_DMI=",dmi,"_DDI=",ed,"_PMA=",pma,"_.h5"))
+  @time evaluateLL!(s0, params, evalParams)
 
 
 

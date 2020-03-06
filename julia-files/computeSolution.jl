@@ -26,6 +26,8 @@ module computeSolution
         j, h, dmi, pma, ed, pbc = matParams
         tRK, nSteps, damping, t = evalParams
 
+        p,m,n = size(mat)
+
         maxLoop = 100000   
         
         enArray = zeros(maxLoop)
