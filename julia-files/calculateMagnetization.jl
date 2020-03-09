@@ -28,7 +28,7 @@ export calcM, calcM2
 
 		end
 
-		return sqrt(mz/(4*pi))
+		return mz/(n*m)
 
 	end
 
