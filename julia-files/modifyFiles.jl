@@ -2,13 +2,13 @@
 
 module modifyFiles
     using HDF5
-    export getH5data,writeDataH5,saveInitCondition,makeDirectory,saveAllData
+    export getDataH5,writeDataH5,saveInitCondition,makeDirectory,saveAllData
 
     # Imports spin data
     #
     # inputs: filename = string of file path relative to code directory
     # outputs: mat = (N,N,3) array 
-    function getH5data(filename::String)
+    function getDataH5(filename::String)
         
         # import initial data. The following are HDF5 objects
         rawfile = h5open(pwd()*filename,"r")
